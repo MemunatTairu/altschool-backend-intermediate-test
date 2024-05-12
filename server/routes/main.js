@@ -1,6 +1,6 @@
 const express = require('express')
 const router  = express.Router();
-const post = require('../models/Post');
+const post = require('../models/post');
 
     router.get('', async (req, res) => {
         const locals = {
@@ -11,8 +11,9 @@ const post = require('../models/Post');
 });
 
 
+
  function insertPostData() {
-    Post.insertMany([
+    post.insertMany([
    { 
     title: "building a blog",
     body:"This is the body text"

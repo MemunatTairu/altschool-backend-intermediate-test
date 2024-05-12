@@ -174,14 +174,17 @@ img {
 .author {
   padding: 10px 0;
   text-align: center;
+  background-color: #E4E4E4;
 }
 
 .author_heading {
   margin-top: 10px;
   margin-bottom: 5px;
+  
 }
 
 .author_body {
+ 
   font-size: var(--font-size-md);
   margin: 5px 0 40px 0;
 }
