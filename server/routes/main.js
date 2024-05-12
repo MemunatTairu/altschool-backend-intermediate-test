@@ -7,32 +7,38 @@ const post = require('../models/post');
           title: "NodeJs Blog",
           description: "Simple Blog created with NodeJs, Express & MongoDb."
         }
-    res.render("index",{locals});
-});
 
 
-
- function insertPostData() {
-    post.insertMany([
-   { 
-    title: "building a blog",
-    body:"This is the body text"
- },
- { 
-    title: "building a blog",
-    body:"This is the body text"
- },
- { 
-    title: "building a blog",
- body:"This is the body text"
-}
-    ])
-}
-insertPostData();
-
-
-
+        try {
+            const data = await Post.find();
+            res.render('index', { locals, data });
+          } catch (error) {
+            console.log(error);
+          }
+//     res.render("index",{locals});
+// });
 router.get('/about', (req, res) => {
     res.render("about");
 });
 module.exports = router;
+
+//  function insertPostData() {
+//     post.insertMany([
+//    { 
+//     title: "building a blog",
+//     body:"This is the body text"
+//  },
+//  { 
+//     title: "building a blog",
+//     body:"This is the body text"
+//  },
+//  { 
+//     title: "building a blog",
+//  body:"This is the body text"
+// }
+//     ])
+// }
+// insertPostData();
+
+
+
