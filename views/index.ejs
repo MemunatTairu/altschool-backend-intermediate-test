@@ -1,20 +1,28 @@
 <div class="author">
-    <h1 class="author__heading">Hi, I am Memunat.</h1>
-    <p class="author__body">Web developer and Physicist.</p>
+    <h1 class="author_heading">Hi, I am Memunat.</h1>
+    <p class="author_body">Web developer and Physicist.</p>
   </div>
   
   <img src="/img/hero.jpg" alt="lady viewing nature" class="hero-image" width="981" height="528">
-  
-  <h2 class="articles__heading">Latest Posts</h2>
+  <section class="articles"></section>
+  <h2 class="articles_heading">Latest Posts</h2>
  
   <ul class="article-ul">
+
+    <% data.forEach(post => { %>
+     
+    
       <li>
-        <a href="#">
-          <span>post.title </span>
-          <span class="article-list__date">Date</span>
+        <a href="/post/<%=post._id  %>">
+          <span><%=post.title  %></span>
+          <span class="article-list_date"><%=post.updatedAt.toDateString() %></span>
         </a>
       </li>
-    
+      <% }) %>
+
   </ul>
-  <a href="#" class="pagination">&lt; View Older Posts</a>
-  
+  <% if (nextPage !== null) { %>
+   <a href="/?page=<%= nextPage %>" class="pagination">&lt; View Older Posts</a>
+
+  <% } %>
+  </section>

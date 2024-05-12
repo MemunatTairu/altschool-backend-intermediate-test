@@ -10,7 +10,23 @@ const PostSchema = new Schema({
     type: String,
     required: true
   },
-  createdAt: {
+  author: {
+    type: String,
+    required: true
+  },
+  state: {
+    type: String,
+    required: true
+  },
+  tags: {
+    type: String,
+    required: true
+  },
+  description: {
+    type: String,
+    required: true
+  },
+  reading_time: {
     type: Date,
     default: Date.now
   },
