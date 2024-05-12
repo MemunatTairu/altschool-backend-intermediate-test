@@ -16,7 +16,7 @@ const post = require('../models/post');
             console.log(error);
           }
 //     res.render("index",{locals});
-// });
+});
 router.get('/about', (req, res) => {
     res.render("about");
 });
