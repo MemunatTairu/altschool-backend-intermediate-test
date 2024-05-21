@@ -1,5 +1,4 @@
 const mongoose = require('mongoose');
-
 const Schema = mongoose.Schema;
 const PostSchema = new Schema({
   title: {
@@ -18,18 +17,12 @@ const PostSchema = new Schema({
     type: String,
     required: true
   },
-  tags: {
-    type: String,
-    required: true
-  },
+ 
   description: {
     type: String,
     required: true
   },
-  reading_time: {
-    type: Date,
-    default: Date.now
-  },
+  
   updatedAt: {
     type: Date,
     default: Date.now

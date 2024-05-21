@@ -10,7 +10,11 @@ const app = express();
 const PORT = 5000 || process.env.PORT;
 
 connectDB();
+// to pass data into th searchBar
+app.use(express.urlencoded({extended:true}))
+app.use(express.json());
 
+// To be able to use the public folder
 app.use(express.static('public'));
 
 

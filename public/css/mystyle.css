@@ -16,8 +16,8 @@ body {
   font-family: 'Poppins', sans-serif;
   color: var(--black);
   font-size: var(--font-size-base);
-  background-color: #c978c9;
-  margin: 0;
+  background-color: #7e757e;
+  margin: 20px;
 }
 
 a { color: var(--black); }
@@ -227,7 +227,7 @@ img {
     align-items: center;
   }
 
-  .article-list__date {
+  .article-list_date {
     text-align: right;
   }
 }
@@ -328,12 +328,13 @@ img {
   right: 0;
   color: var(--gray-light);
   padding: 15px;
+  cursor:pointer;
 }
 
 
 .pagination {
   font-size: 1.3rem;
-  color: green;
+  color: rgb(38, 0, 128);
   text-decoration: none;
   margin-top: 40px;
   display: inline-block;
